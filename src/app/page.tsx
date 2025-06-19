@@ -61,10 +61,11 @@ export default function Home() {
               <div className="interest-box">Personal Finance</div>
               <div className="interest-box">UI Designing</div>
             </div>
-            </div>
+            <div className="divider"></div>
             <div className="social-links">
               <a href="https://github.com/balaganeshbala" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://in.linkedin.com/in/balaganeshbala" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
             </div>
           </section>
         );
@@ -104,9 +105,9 @@ export default function Home() {
             <div className="bar"></div>
           </div>
           <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-            <li><Link href="#" onClick={(e) => handleNavLinkClick(e, "hero")}>Home</Link></li>
-            <li><Link href="#" onClick={(e) => { e.preventDefault(); console.log('Portfolio clicked!'); setActiveSection("portfolio"); setIsMenuOpen(false); }}>Portfolio</Link></li>
-            <li><Link href="#" onClick={(e) => handleNavLinkClick(e, "contact")}>Contact</Link></li>
+            <li><Link href="#" onClick={(e) => handleNavLinkClick(e, "hero")} className={activeSection === "hero" ? "active-link" : ""}>Home</Link></li>
+            <li><Link href="#" onClick={(e) => { e.preventDefault(); console.log('Portfolio clicked!'); setActiveSection("portfolio"); setIsMenuOpen(false); }} className={activeSection === "portfolio" ? "active-link" : ""}>Portfolio</Link></li>
+            <li><Link href="#" onClick={(e) => handleNavLinkClick(e, "contact")} className={activeSection === "contact" ? "active-link" : ""}>Contact</Link></li>
           </ul>
         </nav>
       </header>
