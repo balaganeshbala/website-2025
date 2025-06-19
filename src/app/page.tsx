@@ -54,13 +54,13 @@ export default function Home() {
               </div>
             </div>
             <h3>Interests</h3>
-            <ul>
-              <li>Problem Solving</li>
-              <li>Programming</li>
-              <li>Learning New Technologies</li>
-              <li>Personal Finance</li>
-              <li>UI Designing</li>
-            </ul>
+            <div className="interests-container">
+              <div className="interest-box">Problem Solving</div>
+              <div className="interest-box">Programming</div>
+              <div className="interest-box">Learning New Technologies</div>
+              <div className="interest-box">Personal Finance</div>
+              <div className="interest-box">UI Designing</div>
+            </div>
             </div>
             <div className="social-links">
               <a href="https://github.com/balaganeshbala" target="_blank" rel="noopener noreferrer">GitHub</a>
