@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link"; // Import Link
+import Image from "next/image"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero"); // Default to 'hero'
@@ -25,9 +26,9 @@ export default function Home() {
           <section id="hero" className="hero-section">
             <h1>Balaganesh Sevarkodiyon</h1>
             <div className="about-content">
-            <img src="/profile.jpg" alt="Balaganesh's Profile Photo" className="profile-photo" />
+            <Image src="/profile.jpg" alt="Balaganesh's Profile Photo" className="profile-photo" width={200} height={200} />
             <h2>About Me</h2>
-            <p>I'm Balaganesh from Virudhunagar, Tamil Nadu, currently working as a Software Development Engineer at Juspay in Bangalore. I specialize in iOS development, with a strong focus on building robust and scalable payment software.</p>
+            <p>I&apos;m Balaganesh from Virudhunagar, Tamil Nadu, currently working as a Software Development Engineer at Juspay in Bangalore. I specialize in iOS development, with a strong focus on building robust and scalable payment software.</p>
             <h3>Education</h3>
             <div className="timeline">
               <div className="timeline-item">
