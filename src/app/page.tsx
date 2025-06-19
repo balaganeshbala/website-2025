@@ -1,24 +1,70 @@
 "use client"; // This is needed for using client-side hooks like useState
 
 import { useState } from "react";
+import Link from "next/link"; // Import Link
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("hero"); // Default to 'hero'
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for mobile menu
+
+  const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, section: string) => {
+    e.preventDefault();
+    console.log(`Setting active section to: ${section}`); // Debugging log
+    setActiveSection(section);
+    setIsMenuOpen(false); // Close menu after clicking a link
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const renderSection = () => {
     switch (activeSection) {
       case "hero":
         return (
           <section id="hero" className="hero-section">
-            <h1>Welcome to My Personal Website</h1>
-            <p>A place to showcase my work and connect with me.</p>
-          </section>
-        );
-      case "about":
-        return (
-          <section id="about">
+            <h1>Balaganesh Sevarkodiyon</h1>
+            <div className="about-content">
+            <img src="/profile.jpg" alt="Balaganesh's Profile Photo" className="profile-photo" />
             <h2>About Me</h2>
-            <p>This is a placeholder for information about me.</p>
+            <p>I'm Balaganesh from Virudhunagar, Tamil Nadu, currently working as a Software Development Engineer at Juspay in Bangalore. I specialize in iOS development, with a strong focus on building robust and scalable payment software.</p>
+            <h3>Education</h3>
+            <div className="timeline">
+              <div className="timeline-item">
+                <div className="timeline-year">2010</div>
+                <div className="timeline-content">
+                  <strong>SSLC</strong>
+                  <p>Government Higher Secondary School, Sankaralingapuram</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-year">2013</div>
+                <div className="timeline-content">
+                  <strong>Diploma in Computer Engineering</strong>
+                  <p>VSVN Polytechnic College, Virudhunagar</p>
+                </div>
+              </div>
+              <div className="timeline-item">
+                <div className="timeline-year">2016</div>
+                <div className="timeline-content">
+                  <strong>Bachelor of Engineering in Computer Science</strong>
+                  <p>Mepco Schlenk Engineering College, Sivakasi</p>
+                </div>
+              </div>
+            </div>
+            <h3>Interests</h3>
+            <ul>
+              <li>Problem Solving</li>
+              <li>Programming</li>
+              <li>Learning New Technologies</li>
+              <li>Personal Finance</li>
+              <li>UI Designing</li>
+            </ul>
+            </div>
+            <div className="social-links">
+              <a href="https://github.com/balaganeshbala" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://in.linkedin.com/in/balaganeshbala" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
           </section>
         );
       case "portfolio":
@@ -50,12 +96,16 @@ export default function Home() {
   return (
     <div>
       <header>
-        <nav>
-          <ul>
-            <li><a href="#" onClick={(e) => { e.preventDefault(); setActiveSection("hero"); }}>Home</a></li>
-            <li><a href="#" onClick={(e) => { e.preventDefault(); setActiveSection("about"); }}>About</a></li>
-            <li><a href="#" onClick={(e) => { e.preventDefault(); setActiveSection("portfolio"); }}>Portfolio</a></li>
-            <li><a href="#" onClick={(e) => { e.preventDefault(); setActiveSection("contact"); }}>Contact</a></li>
+        <nav className="navbar">
+          <div className="menu-toggle" onClick={toggleMenu}>
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+          <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+            <li><Link href="#" onClick={(e) => handleNavLinkClick(e, "hero")}>Home</Link></li>
+            <li><Link href="#" onClick={(e) => { e.preventDefault(); console.log('Portfolio clicked!'); setActiveSection("portfolio"); setIsMenuOpen(false); }}>Portfolio</Link></li>
+            <li><Link href="#" onClick={(e) => handleNavLinkClick(e, "contact")}>Contact</Link></li>
           </ul>
         </nav>
       </header>

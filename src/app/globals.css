@@ -1,24 +1,30 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8; /* Slightly off-white for softer look */
     color: #333;
     scroll-behavior: smooth; /* For smooth scrolling */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #ffffff; /* Pure white for header */
+    color: #333; /* Darker text for contrast */
     padding: 1em 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Softer shadow */
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Center menu items */
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    background-color: #444;
+    background-color: #ffffff; /* Pure white for nav background */
 }
 
 nav ul li {
@@ -27,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #333; /* Darker text for contrast */
     text-decoration: none;
     padding: 10px 0;
     display: inline-block;
@@ -36,47 +42,448 @@ nav ul li a {
 main {
     max-width: 960px;
     margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: transparent; /* Remove card background */
+    box-shadow: none; /* Remove card shadow */
+    padding: 0; /* Remove padding from main, sections will handle their own */
 }
 
 section {
-    padding: 20px;
     margin-bottom: 20px;
+    padding: 20px; /* Add padding back to sections */
+    background-color: #ffffff; /* Give sections a white background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for sections */
+    border-radius: 8px; /* Slightly rounded corners */
 }
 
 .hero-section {
-    background-color: #555;
-    color: #fff;
+    background-color: transparent; /* Keep background transparent */
+    color: #333; /* Darker text for contrast */
+    text-align: center; /* Keep text centered for h1 and p directly inside */
+    padding: 40px 20px; /* Slightly less padding */
+    margin-bottom: 30px; /* More space below hero */
+    border-radius: 0; /* No border-radius */
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Larger heading */
+    margin-bottom: 15px; /* More space below heading */
+    color: #222; /* Even darker for prominence */
+}
+
+.hero-section p {
+    font-size: 1.2em; /* Larger tagline */
+    margin-bottom: 30px; /* More space below tagline */
+    color: #555;
+}
+
+.about-content {
+    margin-top: 40px; /* More space from tagline */
+    padding-top: 30px; /* More padding above border */
+    border-top: 1px solid #eee; /* Lighter, subtle border */
+    max-width: 800px; /* Constrain about content width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-photo {
+    width: 180px; /* Larger photo */
+    height: 180px; /* Larger photo */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 25px; /* More space below photo */
+    border: 4px solid #ddd; /* Slightly thicker, lighter border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for photo */
+}
+
+.about-content h2 {
+    font-size: 1.8em; /* Larger About Me heading */
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.about-content p {
+    font-size: 1.1em; /* Larger About Me text */
+    line-height: 1.6; /* Better readability */
+    max-width: 700px; /* Constrain text width */
+    margin: 0 auto 20px auto; /* Center and add margin */
+    text-align: center; /* Center the paragraph text */
+}
+
+.about-content h3 { /* For Education heading */
+    font-size: 1.5em;
+    margin-top: 40px; /* Space above education */
+    margin-bottom: 15px;
+    color: #222;
     text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 0; /* Remove bottom margin for hero */
 }
 
-h1 {
-    font-size: 2.5em;
+.about-content h4 {
+    font-size: 1.5em; /* Same as h3 for consistency */
+    margin-top: 40px; /* Space above interests */
     margin-bottom: 10px;
+    color: #222;
+    text-align: center; /* Center the heading */
 }
 
-h2 {
+/* Interests List styles (reverted from grid) */
+.about-content ul {
+    list-style-type: disc;
+    padding-left: 0; /* Remove default padding */
+    margin: 10px auto; /* Center the list block */
+    text-align: left; /* Keep text aligned left within list items */
+    display: inline-block; /* Use inline-block to center the list itself */
+    max-width: 600px; /* Constrain list width */
+}
+
+.about-content ul li {
+    margin-bottom: 5px; /* Slightly less space between list items */
+    font-size: 1em; /* Standard font size */
+    color: #444;
+    text-align: left; /* Ensure text aligns left within list item */
+}
+
+.social-links {
+    margin-top: 30px; /* More space above social links */
+}
+
+.social-links a {
+    color: #007bff; /* A professional blue for links */
+    text-decoration: none;
+    margin: 0 15px; /* More space between links */
+    font-weight: bold;
+    font-size: 1.1em; /* Larger link text */
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    margin: 40px auto; /* Center the timeline block */
+    padding: 0 20px;
+    max-width: 800px; /* Constrain timeline width */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Center the line */
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between; /* Distribute year and content */
+    margin-bottom: 40px;
+    position: relative;
+    width: 100%;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%; /* Align dot with line */
+    width: 12px;
+    height: 12px;
+    background: #333;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.timeline-year {
+    width: calc(50% - 30px); /* Half width minus space for line/dot */
+    text-align: right; /* Always right-align year on desktop */
+    padding-right: 30px; /* Space from the line */
+    font-weight: bold;
+    color: #555;
+    box-sizing: border-box;
+}
+
+.timeline-content {
+    width: calc(50% - 30px); /* Half width minus space for line/dot */
+    text-align: left; /* Always left-align content on desktop */
+    padding-left: 30px; /* Space from the line */
+    box-sizing: border-box;
+}
+
+/* Alternate items for left/right alignment */
+.timeline-item:nth-child(odd) .timeline-year {
+    order: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    order: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+    order: 2;
+    text-align: left; /* Ensure left alignment for year on right side */
+    padding-left: 30px; /* Ensure padding is correct when order changes */
+    padding-right: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    order: 1;
+    text-align: right; /* Ensure right alignment for content on left side */
+    padding-right: 30px; /* Ensure padding is correct when order changes */
+    padding-left: 0;
+}
+
+/* Responsive adjustments for timeline on smaller screens */
+@media (max-width: 768px) {
+    .timeline {
+        padding: 0 10px; /* Adjust padding for mobile */
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px; /* Move line to left for mobile */
+        width: 2px;
+        height: 100%;
+        background: #ccc;
+        transform: translateX(0); /* No horizontal transform */
+    }
+
+    .timeline-item {
+        flex-direction: column; /* Stack year and content */
+        align-items: flex-start; /* Align items to start */
+        padding-left: 40px; /* Space for the line and dot */
+        position: relative; /* Ensure positioning context for dot */
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 20px; /* Align circle with line */
+        width: 12px;
+        height: 12px;
+        background: #333;
+        border-radius: 50%;
+        transform: translateX(-50%); /* Center the dot on the line */
+        z-index: 1;
+    }
+
+    .timeline-year {
+        width: auto; /* Auto width */
+        text-align: left;
+        padding-right: 0;
+        padding-left: 0; /* Remove padding */
+        margin-bottom: 5px; /* Space between year and content */
+    }
+
+    .timeline-content {
+        width: auto; /* Auto width */
+        padding-left: 0; /* Remove padding */
+    }
+
+    /* Reset order for mobile */
+    .timeline-item:nth-child(odd) .timeline-year,
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-year,
+    .timeline-item:nth-child(even) .timeline-content {
+        order: unset;
+        text-align: left;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.timeline-content strong {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 8px;
     color: #333;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.3;
 }
 
-.project {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 10px;
+.timeline-content p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.4;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+    padding: 15px 0;
+    background-color: #ffffff; /* Pure white for footer */
+    color: #333; /* Darker text for contrast */
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Softer shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+    }
+
+    nav ul {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff; /* Pure white for mobile nav background */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul.open {
+        display: flex; /* Show when open */
+    }
+
+    nav ul li {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on mobile */
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .menu-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #333; /* Darker color for contrast */
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    main {
+        margin: 10px;
+        padding: 0 10px; /* Adjust padding to prevent overflow */
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 15px; /* Adjust margin */
+        box-sizing: border-box; /* Include padding in width */
+    }
+
+    .hero-section {
+        padding: 30px 15px; /* Adjust padding for mobile */
+        margin-bottom: 20px; /* Adjust margin */
+        box-sizing: border-box;
+    }
+
+    .hero-section h1 {
+        font-size: 2em; /* Smaller heading for mobile */
+    }
+
+    .hero-section p {
+        font-size: 1em; /* Smaller tagline for mobile */
+    }
+
+    .about-content {
+        margin-top: 20px; /* Adjust margin */
+        padding-top: 20px; /* Adjust padding */
+        max-width: 100%; /* Ensure it fits screen */
+        box-sizing: border-box;
+    }
+
+    .profile-photo {
+        width: 120px; /* Smaller photo for mobile */
+        height: 120px; /* Smaller photo for mobile */
+        margin-bottom: 15px; /* Adjust margin */
+    }
+
+    .about-content h2 {
+        font-size: 1.5em; /* Smaller heading for mobile */
+    }
+
+    .about-content p {
+        font-size: 0.95em; /* Smaller text for mobile */
+        margin: 0 auto 15px auto; /* Adjust margin */
+    }
+
+    .about-content h4 {
+        font-size: 1.1em; /* Smaller heading for mobile */
+        margin-top: 20px; /* Adjust margin */
+        margin-bottom: 8px; /* Adjust margin */
+    }
+
+    .interests-grid {
+        gap: 10px; /* Smaller gap for mobile */
+        margin-top: 15px; /* Adjust margin */
+        max-width: 100%; /* Ensure it fits screen */
+        padding: 0 5px; /* Add some horizontal padding */
+        box-sizing: border-box;
+    }
+
+    .interest-tile {
+        width: 100px; /* Smaller fixed width for mobile tiles */
+        height: 100px; /* Smaller fixed height for mobile tiles */
+        padding: 8px; /* Adjust padding */
+    }
+
+    .interest-tile p {
+        font-size: 0.8em; /* Smaller font for mobile tiles */
+    }
+
+    .social-links {
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .social-links a {
+        font-size: 1em; /* Smaller font for mobile links */
+        margin: 0 10px; /* Adjust margin */
+    }
+
+    .timeline {
+        padding: 0 10px; /* Adjust padding for mobile */
+        max-width: 100%; /* Ensure it fits screen */
+        box-sizing: border-box;
+    }
+
+    .timeline-item {
+        padding-left: 30px; /* Adjust padding for mobile */
+    }
+
+    .timeline-item::before {
+        left: 10px; /* Adjust dot position for mobile */
+    }
+}
+
+/* Hide hamburger on larger screens */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+    .nav-links {
+        display: flex !important; /* Ensure nav links are always visible on desktop */
+    }
 }
