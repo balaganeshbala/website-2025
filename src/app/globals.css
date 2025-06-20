@@ -1,9 +1,13 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8; /* Slightly off-white for softer look */
+    background-color: #f8f8f8;
     color: #333;
-    scroll-behavior: smooth; /* For smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+p {
+  font-size: 1em;
 }
 
 header {
@@ -82,7 +86,7 @@ section {
 }
 
 .hero-section p {
-    font-size: 1.2em; /* Larger tagline */
+    font-size: 1em; /* Larger tagline */
     margin-bottom: 30px; /* More space below tagline */
     color: #555;
 }
@@ -113,7 +117,7 @@ section {
 }
 
 .about-content p {
-    font-size: 1.1em; /* Larger About Me text */
+    font-size: 1em; /* Standard paragraph text */
     line-height: 1.6; /* Better readability */
     max-width: 700px; /* Constrain text width */
     margin: 0 auto 20px auto; /* Center and add margin */
@@ -177,7 +181,7 @@ section {
     text-decoration: none;
     margin: 0 15px; /* More space between links */
     font-weight: bold;
-    font-size: 1.1em; /* Larger link text */
+    font-size: 1em; /* Larger link text */
     transition: color 0.3s ease;
 }
 
@@ -343,7 +347,7 @@ section {
     margin-top: 0;
     margin-bottom: 8px;
     color: #333;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.3;
     text-align: inherit;
 }
@@ -365,11 +369,11 @@ section {
 /* Keep timeline content font sizes same on mobile */
 @media (max-width: 768px) {
     .timeline-content strong {
-        font-size: 1.1em !important; /* Keep same font size as desktop */
+        font-size: 1em !important; /* Keep same font size as desktop */
     }
 
     .timeline-content p {
-        font-size: 0.95em !important; /* Keep same font size as desktop - institution names */
+        font-size: 1em !important; /* Keep same font size as desktop - institution names */
     }
 }
 
@@ -486,7 +490,7 @@ footer {
     }
 
     .about-content p {
-        font-size: 1.1em; /* Keep same font size as desktop */
+        font-size: 1em; /* Keep same font size as desktop */
         margin: 0 auto 15px auto; /* Adjust margin */
     }
 
@@ -534,6 +538,12 @@ footer {
     }
 }
 
+.portfolio h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #222;
+}
+
 /* Contact Form Styles */
 .contact-section {
     max-width: 800px;
@@ -549,7 +559,7 @@ footer {
 }
 
 .contact-section > p {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #666;
     text-align: center;
     margin-bottom: 40px;
@@ -608,7 +618,7 @@ footer {
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -675,6 +685,11 @@ footer {
 
 /* Mobile responsiveness for contact form */
 @media (max-width: 768px) {
+
+    .portfolio h2 {
+        font-size: 2em;
+    }
+
     .contact-section {
         padding: 30px 15px;
     }

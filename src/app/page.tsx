@@ -199,7 +199,7 @@ export default function Home() {
         );
       case "portfolio":
         return (
-          <section id="portfolio">
+          <section className="portfolio">
             <h2>Portfolio</h2>
             <div className="project">
               <h3>Project 1</h3>
