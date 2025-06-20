@@ -240,6 +240,11 @@ section {
     text-align: left; /* Always left-align content on desktop */
     padding-left: 30px; /* Space from the line */
     box-sizing: border-box;
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Modern browsers */
+    hyphens: auto; /* Add hyphens for better breaking */
+    min-width: 0; /* Allow shrinking below content size */
+    flex-shrink: 1; /* Allow shrinking */
 }
 
 /* Alternate items for left/right alignment */
@@ -263,6 +268,12 @@ section {
     text-align: right; /* Ensure right alignment for content on left side */
     padding-right: 30px; /* Ensure padding is correct when order changes */
     padding-left: 0;
+    word-wrap: break-word; /* Break long words */
+    overflow-wrap: break-word; /* Modern browsers */
+    hyphens: auto; /* Add hyphens for better breaking */
+    min-width: 0; /* Allow shrinking below content size */
+    flex-shrink: 1; /* Allow shrinking */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Responsive adjustments for timeline on smaller screens */
@@ -344,6 +355,22 @@ section {
     font-size: 0.95em;
     line-height: 1.4;
     text-align: inherit;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Keep timeline content font sizes same on mobile */
+@media (max-width: 768px) {
+    .timeline-content strong {
+        font-size: 1.1em !important; /* Keep same font size as desktop */
+    }
+
+    .timeline-content p {
+        font-size: 0.95em !important; /* Keep same font size as desktop - institution names */
+    }
 }
 
 footer {
@@ -363,11 +390,15 @@ footer {
         overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
+    header {
+        padding: 0.5em 0; /* Reduced header padding for mobile */
+    }
+
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em;
+        padding: 0.5em 0em; /* Reduced vertical padding for mobile */
     }
 
     nav ul {
@@ -400,6 +431,7 @@ footer {
         display: block; /* Show hamburger icon on mobile */
         cursor: pointer;
         padding: 10px;
+        margin-left: 25px;
     }
 
     .menu-toggle .bar {
@@ -454,7 +486,7 @@ footer {
     }
 
     .about-content p {
-        font-size: 0.95em; /* Smaller text for mobile */
+        font-size: 1.1em; /* Keep same font size as desktop */
         margin: 0 auto 15px auto; /* Adjust margin */
     }
 
