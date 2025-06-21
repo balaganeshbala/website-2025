@@ -7,7 +7,7 @@ body {
 }
 
 .project {
-    margin-top: 30px;
+    padding: 10px;
 }
 
 .card {
@@ -113,12 +113,12 @@ section {
 }
 
 .hero-section {
-    background-color: transparent; /* Keep background transparent */
+    background-color: #fff; /* Keep background transparent */
     color: #333; /* Darker text for contrast */
     text-align: center; /* Keep text centered for h1 and p directly inside */
     padding: 40px 20px; /* Slightly less padding */
     margin-bottom: 30px; /* More space below hero */
-    border-radius: 0; /* No border-radius */
+    border-radius: 5px;
 }
 
 .hero-section h1 {
@@ -584,13 +584,17 @@ footer {
     font-size: 2.5em;
     margin-bottom: 15px;
     color: #222;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee; /* Lighter, subtle border */
 }
 
 /* Contact Form Styles */
 .contact-section {
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 20px;
 }
 
 .contact-section h2 {
