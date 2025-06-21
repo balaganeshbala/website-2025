@@ -210,12 +210,32 @@ export default function Home() {
                  <div className="card-body">
                     <strong>Technology Stack</strong>
                     <ul>
-                      <li>Frontend: Flutter, Dart, Material Design</li>
-                      <li>Backend & Database: Supabase, PostgreSQL, Real-time subscriptions</li>
-                      <li>State Management: BLoC Pattern, flutter_bloc</li>
+                      <li><b>Frontend:</b> Flutter, Dart, Material Design</li>
+                      <li><b>Backend & Database:</b> Supabase, PostgreSQL</li>
+                      <li><b>State Management:</b> BLoC Pattern, flutter_bloc</li>
                     </ul>
+                    <br></br>
                     <a href="https://github.com/balaganeshbala/budgetpro" target="_blank" rel="noopener noreferrer" className="social-links">Source Code</a>
+                    <br></br>
                     <a href="https://play.google.com/store/apps/details?id=com.clougeon.budgetpro" target="_blank" rel="noopener noreferrer" className="social-links">Google Play Store</a>
+                  </div>
+              </div>
+            </div>
+            <div className="project">
+              <h3>ToDos</h3>
+              <div className="card">
+                <div className="card-header">
+                A feature-rich iOS task management application built with SwiftUI that enables users to create, organize, and track their daily tasks. The app provides a seamless user experience with real-time synchronization, email verification, and an intuitive interface designed for productivity.
+                </div>
+                 <div className="card-body">
+                    <strong>Technology Stack</strong>
+                    <ul>
+                      <li><b>Frontend:</b> SwiftUI, Swift, iOS Human Interface Guidelines</li>
+                      <li><b>Backend & Database:</b> Firebase Authentication, Firebase Firestore, Real-time data synchronization</li>
+                      <li><b>Architecture & State Management:</b> MVVM Pattern, ObservableObject, @StateObject, Environment Objects</li>
+                    </ul>
+                    <br></br>
+                    <a href="https://github.com/balaganeshbala/todos-ios" target="_blank" rel="noopener noreferrer" className="social-links">Source Code</a>
                   </div>
               </div>
             </div>

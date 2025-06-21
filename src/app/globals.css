@@ -6,6 +6,10 @@ body {
     scroll-behavior: smooth;
 }
 
+.project {
+    margin-top: 30px;
+}
+
 .card {
   border: none;
   border-radius: 5px;
@@ -36,6 +40,7 @@ body {
     font-weight: bold;
     font-size: 1em; /* Larger link text */
     transition: color 0.3s ease;
+    line-height: 2;
 }
 
 .card-body a:hover {
