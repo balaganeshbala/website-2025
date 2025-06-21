@@ -202,12 +202,22 @@ export default function Home() {
           <section className="portfolio">
             <h2>Portfolio</h2>
             <div className="project">
-              <h3>Project 1</h3>
-              <p>Description of Project 1.</p>
-            </div>
-            <div className="project">
-              <h3>Project 2</h3>
-              <p>Description of Project 2.</p>
+              <h3>BudgetPro</h3>
+              <div className="card">
+                <div className="card-header">
+                  BudgetPro is a comprehensive personal finance application designed to help users manage budgets, track expenses & incomes, and achieve their financial goals. The app provides a complete financial management solution with intuitive design and powerful analytics.
+                </div>
+                 <div className="card-body">
+                    <strong>Technology Stack</strong>
+                    <ul>
+                      <li>Frontend: Flutter, Dart, Material Design</li>
+                      <li>Backend & Database: Supabase, PostgreSQL, Real-time subscriptions</li>
+                      <li>State Management: BLoC Pattern, flutter_bloc</li>
+                    </ul>
+                    <a href="https://github.com/balaganeshbala/budgetpro" target="_blank" rel="noopener noreferrer" className="social-links">Source Code</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.clougeon.budgetpro" target="_blank" rel="noopener noreferrer" className="social-links">Google Play Store</a>
+                  </div>
+              </div>
             </div>
           </section>
         );

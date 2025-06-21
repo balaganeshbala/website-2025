@@ -6,6 +6,43 @@ body {
     scroll-behavior: smooth;
 }
 
+.card {
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 10px;
+}
+
+.card-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.6;
+}
+
+.card-body {
+  padding: 15px;
+  line-height: 1.6;
+  flex-direction: column;
+}
+
+.card-body a {
+    color: #007bff; /* A professional blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em; /* Larger link text */
+    transition: color 0.3s ease;
+}
+
+.card-body a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
 p {
   font-size: 1em;
 }
