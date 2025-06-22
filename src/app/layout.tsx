@@ -8,8 +8,8 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "My Personal Website", // Update title
-  description: "A personal website built with Next.js", // Update description
+  title: "Balaganesh S", // Update title
+  description: "Welcome to my personal website", // Update description
 };
 
 export default function RootLayout({
@@ -19,6 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={quicksand.className}> {/* Apply Quicksand font */}
         {children}
       </body>
