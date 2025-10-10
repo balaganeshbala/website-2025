@@ -126,7 +126,7 @@ function ContactForm() {
       </form>
 
       <div className="contact-info">
-        <p>You can also reach me directly at: <a href="mailto:me@balaganesh.in">me@balaganesh.in</a></p>
+        <p>You can also reach me directly at: <a href="mailto:mail@balaganesh.in">mail@balaganesh.in</a></p>
       </div>
     </section>
   );
