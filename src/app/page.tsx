@@ -202,10 +202,31 @@ export default function Home() {
           <section className="portfolio">
             <h2>Portfolio</h2>
             <div className="project">
-              <h3>BudgetPro</h3>
+              <h3>BudgetPro iOS</h3>
               <div className="card">
                 <div className="card-header">
-                  BudgetPro is a comprehensive personal finance application designed to help users manage budgets, track expenses & incomes, and achieve their financial goals. The app provides a complete financial management solution with intuitive design and powerful analytics.
+                  BudgetPro is a comprehensive personal finance application designed fully in native iOS to help users manage budgets, track expenses, incomes, and major expenses, and analyze savings. It integrates with a cloud backend for persistence and authentication, and applies a consistent, adaptive UI theme.
+                </div>
+                <div className="card-body">
+                  <strong>Technology Stack</strong>
+                  <ul>
+                    <li><b>Frontend:</b> Swift, SwiftUI (+ UIKit for navigation bar appearance), SFSymbols</li>
+                    <li><b>Architecture:</b> MVVM + Coordinator pattern, NavigationStack with NavigationPath</li>
+                    <li><b>Backend & Database:</b> Supabase (Auth + Database/PostgreSQL) via Supabase Swift SDK</li>
+                    <li><b>State Management:</b> SwiftUI state containers (@StateObject, @EnvironmentObject), ObservableObject-based coordinators and view models, @Published properties</li>
+                    <li><b>Platform:</b> iOS</li>
+                  </ul>
+                  <br/>
+                  <a href="https://github.com/balaganeshbala/budgetpro-ios" target="_blank" rel="noopener noreferrer"
+                    className="social-links">Source Code</a>
+                </div>
+              </div>
+            </div>
+            <div className="project">
+              <h3>BudgetPro Flutter</h3>
+              <div className="card">
+                <div className="card-header">
+                  BudgetPro is a comprehensive personal finance application designed in Flutter(cross platform Android & iOS) to help users manage budgets, track expenses & incomes, and achieve their financial goals. The app provides a complete financial management solution with intuitive design and powerful analytics.
                 </div>
                  <div className="card-body">
                     <strong>Technology Stack</strong>
@@ -213,6 +234,7 @@ export default function Home() {
                       <li><b>Frontend:</b> Flutter, Dart, Material Design</li>
                       <li><b>Backend & Database:</b> Supabase, PostgreSQL</li>
                       <li><b>State Management:</b> BLoC Pattern, flutter_bloc</li>
+                      <li><b>Platform:</b> Android & iOS</li>
                     </ul>
                     <br></br>
                     <a href="https://github.com/balaganeshbala/budgetpro" target="_blank" rel="noopener noreferrer" className="social-links">Source Code</a>
